@@ -1,7 +1,7 @@
 all: game
 
-deplace.o: deplace.c
-	gcc -Wall -c deplace.c
+deplace.o: deplaceTran.c
+	gcc -Wall -c deplaceTran.c
 
 clientAPI.o: clientAPI.c
 	gcc -Wall -c clientAPI.c
@@ -9,8 +9,8 @@ clientAPI.o: clientAPI.c
 snakeAPI.o: snakeAPI.c
 	gcc -Wall -c snakeAPI.c
 
-main.o: main.c
-	gcc -Wall -c main.c
+main.o: mainTran.c
+	gcc -Wall -c mainTran.c
 
 game: deplace.o clientAPI.o snakeAPI.o main.o
 	gcc -Wall -o game deplace.o clientAPI.o snakeAPI.o main.o
